@@ -17,8 +17,13 @@
 	width: 100%;
 	background: #25274D;
 }
+.about {
+	min-height: 100vh;
+	width: 100%;
+	background: #2E9CCA;
+}
 nav {
-	position: absolute;
+	position: fixed;
 	background: #464866;
 	height: 100vh;
 	width: 60px;
@@ -30,6 +35,18 @@ nav {
 	height: 80px;
 	text-align: center;
 	display: inline-block
+}
+.mylogo::after {
+	content: "";
+	width: 0%;
+	height: 2px;
+	background: #3500D3;
+	display: block;
+	margin: auto;
+	transition: 0.5s;
+}
+.mylogo:hover::after {
+	width: 100%;
 }
 .mylogo h1{
 	color: #29648A;
@@ -49,15 +66,18 @@ nav {
 	transform: translate(0, -50%)
 }
 .nav-links ul li {
+	background: #29648A;
+	width: 60px;
+	height: 60px;
 	list-style: none;
 	display: inline-block;
-	padding: 8px 12px;
 	position: relative;
 }
-.nav-links ul li a {
-	color: #fff;
-	text-decoration: none;
-	font-size: 14px;
+.nav-links ul li img {
+	width: 60px;
+	height: 60px;
+	background-color:#03030a;
+	cursor: pointer;
 }
 .nav-links ul li::after {
 	content: "";
@@ -105,18 +125,33 @@ nav {
 	transition: 1s;
 }
 
+.aboutme {
+	width: 80%;
+	color: #fff;
+	position: relative;
+	text-align: left;
+}
+.aboutme h1 {
+	font-size: 48px;
+	margin-top: -20px;
+}
+.aboutme p {
+	margin: 10px 0 30px;
+	font-size: 14px;
+}
+
 @media(max-width:700px) {
 .intro {
 	width: 90%;
 	color: #fff;
 	position: absolute;
-	top: 35%;
+	top: 25%;
 	left: 55%;
 	transform: translate(-50%, -50%);
 	text-align: center;
 }
 .intro h1 {
-	font-size: 34px;
+	font-size: 40px;
 	margin-top: 0px;
 }
 .mylogo{
@@ -142,5 +177,9 @@ nav {
 	height: 100vh;
 	width: 45px;
 	align-items: left;
+}
+.nav-links ul li a{
+	width: 45px;
+	height: 45px;
 }
 }
